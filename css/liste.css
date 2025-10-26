@@ -1,0 +1,7 @@
+body{
+    background: url(../pics/Products.png)no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: 50% 50%;
+    width: 100%;
+}

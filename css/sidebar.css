@@ -1,0 +1,73 @@
+/* General styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 250px; /* Default width */
+  transition: transform 0.3s ease; /* Smooth transition */ /* Fixed width for sidebar */
+  min-height: 100vh; /* Full viewport height */
+  background-color: #d1d1f7;
+  color: white;
+  position: fixed; /* Makes the sidebar fixed */
+  left: 0;
+  top: 0;
+  padding: 1rem;
+}
+
+.sidebar-brand {
+  height: 90px;
+  color: #565add;
+  margin-top: 0%;
+}
+
+.sidebar-menu a {
+  color: #565add;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.list-group-item:hover {
+  background-color: #7376e2;
+  cursor: pointer;
+}
+
+.list-group-item {
+  background-color: #d1d1f7;
+  border: none;
+}
+
+.sidebar-menu ul {
+  padding-left: 0;
+}
+
+/* Main content styles */
+.main-content {
+  margin-left: 250px; /* Leaves space for the sidebar */
+  padding: 2rem; /* Add padding for content */
+  background-color: #fff;
+  min-height: 100vh; /* Match the sidebar height */
+}
+.top-bar {
+  width: 100%;
+  height: 30px;
+  background-color: #d1d1f7; /* Set your desired color */
+  position: sticky;
+}
+.sidebar.collapsed {
+  transform: translateX(-100%); /* Hide sidebar */
+}
+
+@media (max-width: 1450px) {
+  .sidebar {
+    position: fixed;
+    height: 100%;
+    z-index: 1000;
+    transform: translateX(-100%); /* Initially hide on mobile */
+  }
+}
